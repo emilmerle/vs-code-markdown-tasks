@@ -19,6 +19,17 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Hello World from markdown-tasks!');
 	});
 
+	let getActiveFile = vscode.commands.registerCommand('markdown-tasks.getActiveFile', () => {
+		if (vscode.window.activeTextEditor  && vscode.window.activeTextEditor.document.languageId === "markdown") {
+			var fileName = vscode.window.activeTextEditor.document.fileName;
+			vscode.window.showInformationMessage(fileName);
+		} else {
+			vscode.window.showErrorMessage("No markdown file opened!");
+		}
+		
+
+	});
+
 	context.subscriptions.push(helloWorld);
 }
 

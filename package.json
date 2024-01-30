@@ -45,7 +45,7 @@
     "viewsWelcome": [
       {
         "view": "tasks",
-        "contents": "All of your tasks:\n [Open Folder](command:vscode.openFolder)"
+        "contents": "All of your tasks:\n [Get Active File](command:markdown-tasks.getActiveFile)"
       }
     ]
   },
